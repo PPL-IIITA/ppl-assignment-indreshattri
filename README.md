@@ -5,14 +5,14 @@ Tested in linux
 ## Installation
 ### Ques1 and Ques 2):
 1. For the Question 1, in the terminal, execute  
-  
-   - **g++ Ques1.cpp boy.cpp girl.cpp couple.cpp **
+
+   - **g++ Q1.cpp boy.cpp girl.cpp couple.cpp**
   
    - **./a.out**
 
 2. Similarly for the Question 2 ,execute
 
-   - **g++ Ques2.cpp boy.cpp girl.cpp couple.cpp gift.cpp -lm**
+   - **g++ Q2.cpp boy.cpp girl.cpp couple.cpp gift.cpp**
   
    - **./a.out**
   
@@ -31,7 +31,7 @@ Tested in linux
    
 2. For the Question 4, execute
   
-   - **g++ Ques4.cpp boy.cpp couple.cpp gift.cpp girl.cpp**
+   - **g++ Q4.cpp boy.cpp couple.cpp gift.cpp girl.cpp**
   
    - **./a.out**
    
@@ -39,7 +39,7 @@ Tested in linux
    
 3. For the Question 5, execute
   
-   - **g++ Ques5.cpp boy.cpp couple.cpp gift.cpp girl.cpp**
+   - **g++ Q5.cpp boy.cpp couple.cpp gift.cpp girl.cpp**
   
    - **./a.out**
    
@@ -47,7 +47,7 @@ Tested in linux
    
 4. For the Question 6, execute
   
-   - **g++ Ques6.cpp boy.cpp couple.cpp gift.cpp girl.cpp**
+   - **g++ Q6.cpp boy.cpp couple.cpp gift.cpp girl.cpp**
   
    - **./a.out**
    
@@ -55,7 +55,7 @@ Tested in linux
  
  5. For the Question 7, execute
   
-    - **g++ Ques7.cpp boy.cpp couple.cpp gift.cpp girl.cpp lib7.cpp**
+    - **g++ Q7.cpp boy.cpp couple.cpp gift.cpp girl.cpp lib7.cpp**
   
     - **./a.out**
    
@@ -63,7 +63,7 @@ Tested in linux
  
  6. For the Question 8, execute
   
-    - **g++ Ques8.cpp boy.cpp couple.cpp gift.cpp girl.cpp lib8.cpp **
+    - **g++ Q8.cpp boy.cpp couple.cpp gift.cpp girl.cpp lib8.cpp**
   
     - **./a.out**
    
@@ -71,14 +71,14 @@ Tested in linux
  
  7. For the Question 9, execute
   
-    - **g++ Ques9.cpp boy.cpp couple.cpp gift.cpp girl.cpp **
+    - **g++ Q9.cpp boy.cpp couple.cpp gift.cpp girl.cpp**
   
     - **./a.out**
    
  
   7. For the Question 10, execute
   
-     - **g++ Ques10.cpp boy.cpp couple.cpp gift.cpp girl.cpp **
+     - **g++ Q10.cpp boy.cpp couple.cpp gift.cpp girl.cpp**
   
       - **./a.out**
     
