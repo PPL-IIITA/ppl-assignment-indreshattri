@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['g',['G',['../Q10_8cpp.html#aed9ea78689ecce0b7264c02c7f8a9a54',1,'G():&#160;Q10.cpp'],['../Q9_8cpp.html#aed9ea78689ecce0b7264c02c7f8a9a54',1,'G():&#160;Q9.cpp']]],
   ['getattr',['getAttr',['../classBoy.html#a555fc2dfb930f29fdc384f5d7013759b',1,'Boy::getAttr()'],['../classGirl.html#aa86bcd99f1fbcd2359a12b9a94e32486',1,'Girl::getAttr()']]],
   ['getboyname',['getBoyname',['../classcouple.html#afe07f86e775d20508e6cd139488af366',1,'couple']]],
   ['getboytype',['getBoyType',['../classcouple.html#a687986a266cc984fa5d2114c888f52cf',1,'couple']]],
@@ -17,6 +18,7 @@ var searchData=
   ['getprice',['getPrice',['../classGift.html#aa114ca9629b5f02e4df6731d33c69373',1,'Gift']]],
   ['getstatus',['getStatus',['../classBoy.html#a72ac2c3f82b5dbd6ec97bf46dfd62681',1,'Boy::getStatus()'],['../classGirl.html#af8412c80e48e58d5e19f85f30300f8cf',1,'Girl::getStatus()']]],
   ['gettype',['getType',['../classBoy.html#a04fcc2f16f9e3d569c64d23a73d9e258',1,'Boy::getType()'],['../classGirl.html#a2b5bbd35287b7aa074f39702b564bc97',1,'Girl::getType()']]],
+  ['gf',['Gf',['../Q10_8cpp.html#a5e0c07e523d4e77a2cafca06feb836f6',1,'Gf():&#160;Q10.cpp'],['../Q9_8cpp.html#a5e0c07e523d4e77a2cafca06feb836f6',1,'Gf():&#160;Q9.cpp']]],
   ['gift',['Gift',['../classGift.html',1,'']]],
   ['gift_2ecpp',['gift.cpp',['../gift_8cpp.html',1,'']]],
   ['gift_2eh',['gift.h',['../gift_8h.html',1,'']]],

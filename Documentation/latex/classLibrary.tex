@@ -1,0 +1,151 @@
+\hypertarget{classLibrary}{}\section{Library Class Reference}
+\label{classLibrary}\index{Library@{Library}}
+
+
+{\ttfamily \#include $<$lib7.\+h$>$}
+
+
+
+Collaboration diagram for Library\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classLibrary__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classLibrary_af9853cceb7af37b77091c3330b532b2f}{search\+Arr} ()
+\item 
+void \hyperlink{classLibrary_a835ea2c0b31c569aac4a406843c55254}{search\+Sorted\+Arr} ()
+\item 
+void \hyperlink{classLibrary_ad14b4301aa6279c13408ff948ca4fd6a}{search\+Hash} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classcouple}{couple} $\ast$ \hyperlink{classLibrary_a6c32f4296982c3281d61d12b1add0ede}{couples}
+\item 
+\hyperlink{classcouple}{couple} $\ast$ \hyperlink{classLibrary_a30e860e047d63ab63b40ac42e9660f25}{sorted\+Couples}
+\item 
+\hyperlink{classcouple}{couple} \hyperlink{classLibrary_ac6f3af3c59edb37adb8d0becda498b42}{hash\+Couples} \mbox{[}6\mbox{]}
+\item 
+\hyperlink{classBoy}{Boy} \hyperlink{classLibrary_a0da9d216b9e07af39f5f0f3241a0a45c}{boys\+List} \mbox{[}9\mbox{]}
+\item 
+ofstream \hyperlink{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{log\+File}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Library@{Library}!search\+Arr@{search\+Arr}}
+\index{search\+Arr@{search\+Arr}!Library@{Library}}
+\subsubsection[{\texorpdfstring{search\+Arr()}{searchArr()}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::search\+Arr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLibrary_af9853cceb7af37b77091c3330b532b2f}{}\label{classLibrary_af9853cceb7af37b77091c3330b532b2f}
+
+\begin{DoxyCode}
+4 \{   
+5 
+6     fstream \hyperlink{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{logFile}(\textcolor{stringliteral}{"logFile7.dat"}, std::fstream::in | std::fstream::out | std::fstream::app);
+7     \hyperlink{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{logFile}<<\textcolor{stringliteral}{"\(\backslash\)n----------You selected Linear search------------\(\backslash\)n\(\backslash\)n"};
+8     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \hyperlink{lib7_8h_a20a0f494ca2c397f664e1911db5e084b}{S}; j++) \{
+9         \textcolor{keywordtype}{int} flag = 0;
+10         \textcolor{keywordtype}{int} ind;
+11         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{lib7_8h_a5464533d23b59ba11030432e73528730}{C}; i++) \{
+12 
+13             \textcolor{keywordflow}{if}(\hyperlink{classLibrary_a6c32f4296982c3281d61d12b1add0ede}{couples}[i].getBoyname()[0] == \hyperlink{classLibrary_a0da9d216b9e07af39f5f0f3241a0a45c}{boysList}[j].getName()[0])\{
+14 
+15                 flag == 1;
+16                 ind = i;        
+17                 \hyperlink{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{logFile}<<\textcolor{stringliteral}{"Boy b"}<<\hyperlink{classLibrary_a0da9d216b9e07af39f5f0f3241a0a45c}{boysList}[j].\hyperlink{classBoy_acf59fd0074a6ea3413751a95b2970303}{getName}()<<\textcolor{stringliteral}{" is commited with Girl g"}<<
+      \hyperlink{classLibrary_a6c32f4296982c3281d61d12b1add0ede}{couples}[ind].\hyperlink{classcouple_a7897320b780dbeaa85380c71803de9c2}{getGirlname}()<<endl; 
+18             \} 
+19         \}
+20     \}
+21 
+22 \}
+\end{DoxyCode}
+\index{Library@{Library}!search\+Hash@{search\+Hash}}
+\index{search\+Hash@{search\+Hash}!Library@{Library}}
+\subsubsection[{\texorpdfstring{search\+Hash()}{searchHash()}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::search\+Hash (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLibrary_ad14b4301aa6279c13408ff948ca4fd6a}{}\label{classLibrary_ad14b4301aa6279c13408ff948ca4fd6a}
+
+\begin{DoxyCode}
+42 \{
+43     fstream \hyperlink{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{logFile}(\textcolor{stringliteral}{"logFile7.dat"}, std::fstream::in | std::fstream::out | std::fstream::app);
+44     \hyperlink{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{logFile}<<\textcolor{stringliteral}{"\(\backslash\)n-----------You selected Hash algorith-----------\(\backslash\)n\(\backslash\)n"};
+45     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \hyperlink{lib7_8h_a20a0f494ca2c397f664e1911db5e084b}{S}; j++) \{
+46         \textcolor{keywordtype}{int} flag = 0;
+47         \textcolor{keywordtype}{int} ind;
+48         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{lib7_8h_a5464533d23b59ba11030432e73528730}{C}; i++) \{
+49 
+50             \textcolor{keywordflow}{if}(\hyperlink{classLibrary_ac6f3af3c59edb37adb8d0becda498b42}{hashCouples}[i].getBoyname()[0] == \hyperlink{classLibrary_a0da9d216b9e07af39f5f0f3241a0a45c}{boysList}[j].getName()[0])\{
+51 
+52                 flag == 1;
+53                 ind = i;        
+54                 \hyperlink{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{logFile}<<\textcolor{stringliteral}{"Boy b"}<<\hyperlink{classLibrary_a0da9d216b9e07af39f5f0f3241a0a45c}{boysList}[j].\hyperlink{classBoy_acf59fd0074a6ea3413751a95b2970303}{getName}()<<\textcolor{stringliteral}{" is commited with Girl g"}<<
+      \hyperlink{classLibrary_ac6f3af3c59edb37adb8d0becda498b42}{hashCouples}[ind].\hyperlink{classcouple_a7897320b780dbeaa85380c71803de9c2}{getGirlname}()<<endl; 
+55             \} 
+56         \}
+57     \}
+58 \}
+\end{DoxyCode}
+\index{Library@{Library}!search\+Sorted\+Arr@{search\+Sorted\+Arr}}
+\index{search\+Sorted\+Arr@{search\+Sorted\+Arr}!Library@{Library}}
+\subsubsection[{\texorpdfstring{search\+Sorted\+Arr()}{searchSortedArr()}}]{\setlength{\rightskip}{0pt plus 5cm}void Library\+::search\+Sorted\+Arr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLibrary_a835ea2c0b31c569aac4a406843c55254}{}\label{classLibrary_a835ea2c0b31c569aac4a406843c55254}
+
+\begin{DoxyCode}
+24 \{
+25     fstream \hyperlink{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{logFile}(\textcolor{stringliteral}{"logFile7.dat"}, std::fstream::in | std::fstream::out | std::fstream::app);
+26     \hyperlink{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{logFile}<<\textcolor{stringliteral}{"\(\backslash\)n--------You selected Binary Search in sorted Array---------\(\backslash\)n\(\backslash\)n"};
+27     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \hyperlink{lib7_8h_a20a0f494ca2c397f664e1911db5e084b}{S}; j++) \{
+28         \textcolor{keywordtype}{int} flag = 0;
+29         \textcolor{keywordtype}{int} ind;
+30         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{lib7_8h_a5464533d23b59ba11030432e73528730}{C}; i++) \{
+31 
+32             \textcolor{keywordflow}{if}(\hyperlink{classLibrary_a30e860e047d63ab63b40ac42e9660f25}{sortedCouples}[i].getBoyname()[0] == \hyperlink{classLibrary_a0da9d216b9e07af39f5f0f3241a0a45c}{boysList}[j].getName()[0])\{
+33 
+34                 flag == 1;
+35                 ind = i;        
+36                 \hyperlink{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{logFile}<<\textcolor{stringliteral}{"Boy b"}<<\hyperlink{classLibrary_a0da9d216b9e07af39f5f0f3241a0a45c}{boysList}[j].\hyperlink{classBoy_acf59fd0074a6ea3413751a95b2970303}{getName}()<<\textcolor{stringliteral}{" is commited with Girl g"}<<
+      \hyperlink{classLibrary_a30e860e047d63ab63b40ac42e9660f25}{sortedCouples}[ind].\hyperlink{classcouple_a7897320b780dbeaa85380c71803de9c2}{getGirlname}()<<endl; 
+37             \} 
+38         \}
+39     \}
+40 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\index{Library@{Library}!boys\+List@{boys\+List}}
+\index{boys\+List@{boys\+List}!Library@{Library}}
+\subsubsection[{\texorpdfstring{boys\+List}{boysList}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Boy} Library\+::boys\+List\mbox{[}9\mbox{]}}\hypertarget{classLibrary_a0da9d216b9e07af39f5f0f3241a0a45c}{}\label{classLibrary_a0da9d216b9e07af39f5f0f3241a0a45c}
+\index{Library@{Library}!couples@{couples}}
+\index{couples@{couples}!Library@{Library}}
+\subsubsection[{\texorpdfstring{couples}{couples}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf couple}$\ast$ Library\+::couples}\hypertarget{classLibrary_a6c32f4296982c3281d61d12b1add0ede}{}\label{classLibrary_a6c32f4296982c3281d61d12b1add0ede}
+\index{Library@{Library}!hash\+Couples@{hash\+Couples}}
+\index{hash\+Couples@{hash\+Couples}!Library@{Library}}
+\subsubsection[{\texorpdfstring{hash\+Couples}{hashCouples}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf couple} Library\+::hash\+Couples\mbox{[}6\mbox{]}}\hypertarget{classLibrary_ac6f3af3c59edb37adb8d0becda498b42}{}\label{classLibrary_ac6f3af3c59edb37adb8d0becda498b42}
+\index{Library@{Library}!log\+File@{log\+File}}
+\index{log\+File@{log\+File}!Library@{Library}}
+\subsubsection[{\texorpdfstring{log\+File}{logFile}}]{\setlength{\rightskip}{0pt plus 5cm}ofstream Library\+::log\+File}\hypertarget{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}{}\label{classLibrary_ad8fbb4e17a98e57b3cffe8257710045d}
+\index{Library@{Library}!sorted\+Couples@{sorted\+Couples}}
+\index{sorted\+Couples@{sorted\+Couples}!Library@{Library}}
+\subsubsection[{\texorpdfstring{sorted\+Couples}{sortedCouples}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf couple}$\ast$ Library\+::sorted\+Couples}\hypertarget{classLibrary_a30e860e047d63ab63b40ac42e9660f25}{}\label{classLibrary_a30e860e047d63ab63b40ac42e9660f25}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lib7_8h}{lib7.\+h}\item 
+\hyperlink{lib7_8cpp}{lib7.\+cpp}\end{DoxyCompactItemize}

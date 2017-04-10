@@ -31,3 +31,44 @@ int \hyperlink{Q1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 $<$ Read boys data
 
 $<$ Make Couples 
+\begin{DoxyCode}
+10 \{
+11     ifstream boyPtr(\textcolor{stringliteral}{"boyrec.txt"}, ios::in);
+12     ifstream girlPtr(\textcolor{stringliteral}{"girlrec.txt"}, ios::in);
+13     ofstream opPtr(\textcolor{stringliteral}{"output.txt"}, ios::out);
+14     \textcolor{keywordtype}{int} \hyperlink{lib7_8h_aeee5e31bf47987f4c471a1649ec9e43f}{noBoys} = 7,\hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls} = 4;
+15     \hyperlink{classBoy}{Boy} boy[\hyperlink{lib7_8h_aeee5e31bf47987f4c471a1649ec9e43f}{noBoys}];
+16     \hyperlink{classGirl}{Girl} girl[\hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}];
+17     \textcolor{keywordtype}{int} maint, budget,intelli,attr,i;
+18     \textcolor{keywordtype}{string} name,girlName,boyName,type;
+19     
+21     \textcolor{keywordflow}{for}( i = 0; i < \hyperlink{lib7_8h_aeee5e31bf47987f4c471a1649ec9e43f}{noBoys}; i++) \{
+22         boyPtr >> name >> type >> attr >> intelli >> budget ;
+23         boy[i].\hyperlink{classBoy_aa6d16a472a01b4e7da0817fe94d9a2bd}{init}(name,type,attr,intelli,budget);
+24     \}
+25 
+27     \textcolor{keywordflow}{for}( i = 0; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+28         girlPtr >> name >> type >> attr >> intelli >> maint ;
+29         girl[i].\hyperlink{classGirl_aba849734c908a23bde2e5bd9c335c450}{init}(name,type,attr,intelli,budget);
+30     \}
+31 
+32     \textcolor{keywordtype}{int} j = 0,k = 0;
+34     \textcolor{keywordflow}{for}( i = 0; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+35         maint = girl[i].\hyperlink{classGirl_ac23543169a5e339a3c93fbd8aeb977ca}{getMaint}();
+36         girlName = girl[i].\hyperlink{classGirl_a27a705fb94b92dfd6929d0bf4bcaf5e1}{getName}();
+37         \textcolor{keywordflow}{for}( j = k; j < \hyperlink{lib7_8h_aeee5e31bf47987f4c471a1649ec9e43f}{noBoys}; j++) \{
+38             budget = boy[j].\hyperlink{classBoy_a05c48b12091ebcad44ba86ba88514ac5}{getBudget}();
+39             boyName = boy[j].\hyperlink{classBoy_acf59fd0074a6ea3413751a95b2970303}{getName}();
+40             \textcolor{keywordflow}{if}(maint < budget && !(girl[i].getStatus() ) && !(boy[j].getStatus() ) ) \{
+41                     opPtr << girlName << \textcolor{stringliteral}{"        "} << boyName << endl;
+42                     girl[i].\hyperlink{classGirl_ac4e040efdf40d12044bda1b647e0d2da}{changeStatus}();
+43                     boy[j].\hyperlink{classBoy_a2a8cc82d9332c07eb475198e46028d52}{changeStatus}();
+44                     k++;
+45                     \textcolor{keywordflow}{break};
+46             \} \textcolor{keywordflow}{else} \{
+47                 j--;
+48             \}
+49         \}
+50     \}
+51 \}
+\end{DoxyCode}

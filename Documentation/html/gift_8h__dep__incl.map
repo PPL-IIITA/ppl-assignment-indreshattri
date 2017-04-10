@@ -1,4 +1,12 @@
 <map id="gift.h" name="gift.h">
 <area shape="rect" id="node2" href="$gift_8cpp.html" title="gift.cpp" alt="" coords="5,80,71,107"/>
-<area shape="rect" id="node3" href="$Q2_8cpp.html" title="Q2.cpp" alt="" coords="95,80,159,107"/>
+<area shape="rect" id="node3" href="$lib7_8h.html" title="lib7.h" alt="" coords="95,80,149,107"/>
+<area shape="rect" id="node5" href="$Q7_8cpp.html" title="Q7.cpp" alt="" coords="154,155,218,181"/>
+<area shape="rect" id="node6" href="$Q10_8cpp.html" title="Q10.cpp" alt="" coords="224,80,295,107"/>
+<area shape="rect" id="node7" href="$Q2_8cpp.html" title="Q2.cpp" alt="" coords="319,80,383,107"/>
+<area shape="rect" id="node8" href="$Q4_8cpp.html" title="Q4.cpp" alt="" coords="407,80,471,107"/>
+<area shape="rect" id="node9" href="$Q5_8cpp.html" title="Q5.cpp" alt="" coords="495,80,559,107"/>
+<area shape="rect" id="node10" href="$Q6_8cpp.html" title="Q6.cpp" alt="" coords="583,80,647,107"/>
+<area shape="rect" id="node11" href="$Q9_8cpp.html" title="Q9.cpp" alt="" coords="671,80,735,107"/>
+<area shape="rect" id="node4" href="$lib7_8cpp.html" title="lib7.cpp" alt="" coords="63,155,130,181"/>
 </map>

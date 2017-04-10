@@ -35,6 +35,12 @@ std\+::string \hyperlink{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}{get\+Type} 
 \item[{int}]{price}
 \end{DoxyParamCaption}
 )}\hypertarget{classBoy_a1ffc629e12e8a14b48c5b65133af9809}{}\label{classBoy_a1ffc629e12e8a14b48c5b65133af9809}
+
+\begin{DoxyCode}
+26                                  \{
+27     budget = budget + price;
+28 \}
+\end{DoxyCode}
 \index{Boy@{Boy}!change\+Status@{change\+Status}}
 \index{change\+Status@{change\+Status}!Boy@{Boy}}
 \subsubsection[{\texorpdfstring{change\+Status()}{changeStatus()}}]{\setlength{\rightskip}{0pt plus 5cm}void Boy\+::change\+Status (
@@ -42,6 +48,16 @@ std\+::string \hyperlink{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}{get\+Type} 
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBoy_a2a8cc82d9332c07eb475198e46028d52}{}\label{classBoy_a2a8cc82d9332c07eb475198e46028d52}
+
+\begin{DoxyCode}
+42                        \{
+43     \textcolor{keywordflow}{if}(committed == 0) \{
+44         committed = 1;
+45     \} \textcolor{keywordflow}{else} \{
+46         committed = 0;
+47     \}
+48 \}
+\end{DoxyCode}
 \index{Boy@{Boy}!get\+Attr@{get\+Attr}}
 \index{get\+Attr@{get\+Attr}!Boy@{Boy}}
 \subsubsection[{\texorpdfstring{get\+Attr()}{getAttr()}}]{\setlength{\rightskip}{0pt plus 5cm}int Boy\+::get\+Attr (
@@ -49,6 +65,12 @@ std\+::string \hyperlink{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}{get\+Type} 
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBoy_a555fc2dfb930f29fdc384f5d7013759b}{}\label{classBoy_a555fc2dfb930f29fdc384f5d7013759b}
+
+\begin{DoxyCode}
+21                   \{
+22     \textcolor{keywordflow}{return} attr;
+23 \}
+\end{DoxyCode}
 \index{Boy@{Boy}!get\+Budget@{get\+Budget}}
 \index{get\+Budget@{get\+Budget}!Boy@{Boy}}
 \subsubsection[{\texorpdfstring{get\+Budget()}{getBudget()}}]{\setlength{\rightskip}{0pt plus 5cm}int Boy\+::get\+Budget (
@@ -56,6 +78,12 @@ std\+::string \hyperlink{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}{get\+Type} 
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBoy_a05c48b12091ebcad44ba86ba88514ac5}{}\label{classBoy_a05c48b12091ebcad44ba86ba88514ac5}
+
+\begin{DoxyCode}
+13                     \{
+14     \textcolor{keywordflow}{return} budget;
+15 \}
+\end{DoxyCode}
 \index{Boy@{Boy}!get\+Intelli@{get\+Intelli}}
 \index{get\+Intelli@{get\+Intelli}!Boy@{Boy}}
 \subsubsection[{\texorpdfstring{get\+Intelli()}{getIntelli()}}]{\setlength{\rightskip}{0pt plus 5cm}int Boy\+::get\+Intelli (
@@ -63,6 +91,12 @@ std\+::string \hyperlink{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}{get\+Type} 
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBoy_adb7888ec543c4dcba1bcb1d7e32d7ed1}{}\label{classBoy_adb7888ec543c4dcba1bcb1d7e32d7ed1}
+
+\begin{DoxyCode}
+17                      \{
+18     \textcolor{keywordflow}{return} intelli;
+19 \}
+\end{DoxyCode}
 \index{Boy@{Boy}!get\+Name@{get\+Name}}
 \index{get\+Name@{get\+Name}!Boy@{Boy}}
 \subsubsection[{\texorpdfstring{get\+Name()}{getName()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Boy\+::get\+Name (
@@ -70,6 +104,12 @@ std\+::string \hyperlink{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}{get\+Type} 
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBoy_acf59fd0074a6ea3413751a95b2970303}{}\label{classBoy_acf59fd0074a6ea3413751a95b2970303}
+
+\begin{DoxyCode}
+30                         \{
+31     \textcolor{keywordflow}{return} name;
+32 \}
+\end{DoxyCode}
 \index{Boy@{Boy}!get\+Status@{get\+Status}}
 \index{get\+Status@{get\+Status}!Boy@{Boy}}
 \subsubsection[{\texorpdfstring{get\+Status()}{getStatus()}}]{\setlength{\rightskip}{0pt plus 5cm}int Boy\+::get\+Status (
@@ -77,6 +117,12 @@ std\+::string \hyperlink{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}{get\+Type} 
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBoy_a72ac2c3f82b5dbd6ec97bf46dfd62681}{}\label{classBoy_a72ac2c3f82b5dbd6ec97bf46dfd62681}
+
+\begin{DoxyCode}
+34                    \{
+35     \textcolor{keywordflow}{return} committed;
+36 \}
+\end{DoxyCode}
 \index{Boy@{Boy}!get\+Type@{get\+Type}}
 \index{get\+Type@{get\+Type}!Boy@{Boy}}
 \subsubsection[{\texorpdfstring{get\+Type()}{getType()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Boy\+::get\+Type (
@@ -84,6 +130,12 @@ std\+::string \hyperlink{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}{get\+Type} 
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}{}\label{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}
+
+\begin{DoxyCode}
+38                         \{
+39     \textcolor{keywordflow}{return} type;
+40 \}
+\end{DoxyCode}
 \index{Boy@{Boy}!init@{init}}
 \index{init@{init}!Boy@{Boy}}
 \subsubsection[{\texorpdfstring{init(std\+::string boyname, std\+::string boytype, int boyattr, int boyintelli, int boybud)}{init(std::string boyname, std::string boytype, int boyattr, int boyintelli, int boybud)}}]{\setlength{\rightskip}{0pt plus 5cm}void Boy\+::init (
@@ -95,6 +147,17 @@ std\+::string \hyperlink{classBoy_a04fcc2f16f9e3d569c64d23a73d9e258}{get\+Type} 
 \item[{int}]{boybud}
 \end{DoxyParamCaption}
 )}\hypertarget{classBoy_aa6d16a472a01b4e7da0817fe94d9a2bd}{}\label{classBoy_aa6d16a472a01b4e7da0817fe94d9a2bd}
+
+\begin{DoxyCode}
+4                                                                                              \{
+5     name = boyname;
+6     type = boytype;
+7     attr = boyattr;
+8     intelli = boyintelli;
+9     budget = boybud;
+10     committed = 0;
+11 \}
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

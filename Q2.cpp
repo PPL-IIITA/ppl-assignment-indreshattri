@@ -31,7 +31,7 @@ int main()
 	ifstream giftPtr("gifts.txt", ios::in);
 	ofstream giftout("giftslog.txt", ios::out);
 
-	int noBoys = 7,noGirls = 4;
+	int noBoys = 9,noGirls = 6;
 	Boy boy[noBoys];
 	Girl girl[noGirls];
 	couple couple[noGirls];
@@ -75,7 +75,7 @@ int main()
 	int val,pr;
 	std:: string ty;
 	/*!< Read the gifts */
-	for(i = 0; i < 4*noGirls; i++) {
+	for(i = 0; i < 14; i++) {
 		giftPtr >> val >> pr >> ty;
 		gift[i].init(val,pr,ty);
 	}
@@ -84,7 +84,7 @@ int main()
 	j = 0;
 	for(i = 0; i < noGirls; i++) {
 		currbud = couple[i].getCurrBudget() ;
-		while(currbud > gift[j].getPrice()) {
+		while(currbud > gift[j].getPrice() && j < 14) {
 			pr = gift[j].getPrice();
 			giftout << couple[i].getBoyname() << "  " << couple[i].getGirlname() << "  " <<  pr << endl;
 			couple[i].changeCurrBudget(pr);
@@ -143,7 +143,7 @@ int main()
 
 	/*!< Print sorted couple in a file */
 	for(i = 0; i< k; i++) {
-		happiness << couple[i].getBoyname() << "  " << couple[i].getGirlname() << endl;
+		happiness << couple[i].getBoyname() << "  " << couple[i].getGirlname() <<  "   " << couple[i].getHappiness() << endl;
 	}
 
 	/*!< Set compatibility for couples */

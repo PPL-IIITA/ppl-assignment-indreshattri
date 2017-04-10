@@ -1,0 +1,241 @@
+\hypertarget{Q4_8cpp}{}\section{Q4.\+cpp File Reference}
+\label{Q4_8cpp}\index{Q4.\+cpp@{Q4.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}boy.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}girl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}couple.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gift.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+Include dependency graph for Q4.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Q4_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Q4_8cpp_a5a408068bacb1c7add72673eb9d96bbc}{swap\+Couple} (\hyperlink{classcouple}{couple} \&a, \hyperlink{classcouple}{couple} \&b)
+\item 
+void \hyperlink{Q4_8cpp_ac5c65f5b5ec33f7b8ab8012de336fdb7}{swapC} (\hyperlink{classcouple}{couple} \&a, \hyperlink{classcouple}{couple} \&b)
+\item 
+int \hyperlink{Q4_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Q4.\+cpp@{Q4.\+cpp}!main@{main}}
+\index{main@{main}!Q4.\+cpp@{Q4.\+cpp}}
+\subsubsection[{\texorpdfstring{main()}{main()}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{Q4_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{Q4_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+$<$ Read boys data
+
+$<$ Read the gifts
+
+$<$ Sort couples according to their happiness 
+\begin{DoxyCode}
+27 \{
+28     ifstream boyPtr(\textcolor{stringliteral}{"boyrec.txt"}, ios::in);
+29     ifstream girlPtr(\textcolor{stringliteral}{"girlrec.txt"}, ios::in);
+30     ofstream opPtr(\textcolor{stringliteral}{"output.txt"}, ios::out);
+31     ifstream giftPtr(\textcolor{stringliteral}{"gifts.txt"}, ios::in);
+32     ofstream giftout(\textcolor{stringliteral}{"giftslog.txt"}, ios::out);
+33     ofstream happiness(\textcolor{stringliteral}{"sortedHappiness.txt"}, ios::out);
+34     ofstream compatibility(\textcolor{stringliteral}{"sortedComaptibility.txt"}, ios::out);
+35     ofstream breakup(\textcolor{stringliteral}{"breakup.txt"}, ios::out);
+36     ofstream newCouples(\textcolor{stringliteral}{"couples.txt"}, ios::out);
+37 
+38     \textcolor{keywordtype}{int} \hyperlink{lib7_8h_aeee5e31bf47987f4c471a1649ec9e43f}{noBoys} = 9,\hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls} = 6;
+39     \hyperlink{classBoy}{Boy} boy[\hyperlink{lib7_8h_aeee5e31bf47987f4c471a1649ec9e43f}{noBoys}];
+40     \hyperlink{classGirl}{Girl} girl[\hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}];
+41     \hyperlink{classcouple}{couple} \hyperlink{classcouple}{couple}[\hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}];
+42     \hyperlink{classGift}{Gift} gift[4*\hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}];
+43     \textcolor{keywordtype}{int} maint, budget,intelli,attr,i;
+44     \textcolor{keywordtype}{string} name,girlName,boyName,type;
+45     
+47     \textcolor{keywordflow}{for}( i = 0; i < \hyperlink{lib7_8h_aeee5e31bf47987f4c471a1649ec9e43f}{noBoys}; i++) \{
+48         boyPtr >> name >> type >>attr >> intelli >> budget ;
+49         boy[i].\hyperlink{classBoy_aa6d16a472a01b4e7da0817fe94d9a2bd}{init}(name,type,attr,intelli,budget);
+50     \}
+51 
+53     \textcolor{keywordflow}{for}( i = 0; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+54         girlPtr >> name >> type >> attr >> intelli >> maint ;
+55         girl[i].\hyperlink{classGirl_aba849734c908a23bde2e5bd9c335c450}{init}(name,type,attr,intelli,budget);
+56     \}
+57 
+59     \textcolor{keywordtype}{int} j = 0,k = 0;
+60     \textcolor{keywordflow}{for}( i = 0; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+61         maint = girl[i].\hyperlink{classGirl_ac23543169a5e339a3c93fbd8aeb977ca}{getMaint}();
+62         girlName = girl[i].\hyperlink{classGirl_a27a705fb94b92dfd6929d0bf4bcaf5e1}{getName}();
+63         \textcolor{keywordflow}{for}( j = k; j < \hyperlink{lib7_8h_aeee5e31bf47987f4c471a1649ec9e43f}{noBoys}; j++) \{
+64             budget = boy[j].\hyperlink{classBoy_a05c48b12091ebcad44ba86ba88514ac5}{getBudget}();
+65             boyName = boy[j].\hyperlink{classBoy_acf59fd0074a6ea3413751a95b2970303}{getName}();
+66             \textcolor{keywordflow}{if}(maint < budget && !(girl[i].getStatus() ) && !(boy[j].getStatus() ) ) \{
+67                     opPtr << girlName << \textcolor{stringliteral}{"        "} << boyName << endl;
+68                     couple[i].\hyperlink{classcouple_a3ee36a530603865ff58470bae84da220}{init}(boyName,boy[j].getType(), girlName,boy[j].getBudget(),girl[i].
+      getMaint(),boy[j].getAttr(),girl[i].getAttr(),boy[j].getIntelli(),girl[i].getIntelli());
+69                     girl[i].\hyperlink{classGirl_ac4e040efdf40d12044bda1b647e0d2da}{changeStatus}();
+70                     boy[j].\hyperlink{classBoy_a2a8cc82d9332c07eb475198e46028d52}{changeStatus}();
+71                     k++;
+72                     \textcolor{keywordflow}{break};
+73             \} \textcolor{keywordflow}{else} \{
+74                 j--;
+75             \}
+76         \}
+77     \}
+78 
+79     \textcolor{keywordtype}{int} val,pr;
+80     std:: string ty;
+82     \textcolor{keywordflow}{for}(i = 0; i < 2*\hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+83         giftPtr >> val >> pr >> ty;
+84         gift[i].\hyperlink{classGift_aee7c5672f4d1ee738a7dbeb6f952fe1f}{init}(val,pr,ty);
+85     \}
+87     \textcolor{keywordtype}{int} currbud;
+88     j = 0;
+89     \textcolor{keywordflow}{for}(i = 0; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+90         currbud = couple[i].\hyperlink{classcouple_af4b090a72111d7ba566747e4e305a6ec}{getCurrBudget}() ;
+91         \textcolor{keywordflow}{while}(currbud > gift[j].getPrice()) \{
+92             pr = gift[j].\hyperlink{classGift_aa114ca9629b5f02e4df6731d33c69373}{getPrice}();
+93             giftout << couple[i].\hyperlink{classcouple_afe07f86e775d20508e6cd139488af366}{getBoyname}() << \textcolor{stringliteral}{"  "} << couple[i].
+      \hyperlink{classcouple_a7897320b780dbeaa85380c71803de9c2}{getGirlname}() << \textcolor{stringliteral}{"  "} <<  pr << endl;
+94             couple[i].\hyperlink{classcouple_afa9889ca750dd53ffd06daf78cbee326}{changeCurrBudget}(pr);
+95             j++;
+96             currbud = couple[i].\hyperlink{classcouple_af4b090a72111d7ba566747e4e305a6ec}{getCurrBudget}() ;
+97         \}
+98     \}
+99     \textcolor{comment}{/*}
+100 \textcolor{comment}{    * Calculate Happiness of Girls}
+101 \textcolor{comment}{    */}
+102     \textcolor{keywordtype}{int} bh,gh,cost;
+103     \textcolor{keywordflow}{for}( i = 0; i< \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+104         type = girl[i].\hyperlink{classGirl_a2b5bbd35287b7aa074f39702b564bc97}{getType}();
+105         cost = couple[i].\hyperlink{classcouple_a5f31ac8019f5db29694dc36cdba958b8}{getCost}();
+106         \textcolor{keywordflow}{if}(type == \textcolor{stringliteral}{"Choosy"}) \{
+107             gh = log10(cost / girl[i].getMaint());
+108         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type == \textcolor{stringliteral}{"Normal"}) \{
+109             gh = cost / girl[i].\hyperlink{classGirl_ac23543169a5e339a3c93fbd8aeb977ca}{getMaint}();
+110         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type == \textcolor{stringliteral}{"Desperate"}) \{
+111             gh = exp(cost / girl[i].getMaint());
+112         \}
+113         couple[i].\hyperlink{classcouple_a526f48a752f261212d111a630f5730f4}{setGirlHappiness}(gh);
+114     \}
+115  
+117     \textcolor{keywordflow}{for}(i = 0; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+118         type = couple[i].\hyperlink{classcouple_a687986a266cc984fa5d2114c888f52cf}{getBoyType}();
+119         cost = couple[i].\hyperlink{classcouple_a5f31ac8019f5db29694dc36cdba958b8}{getCost}();
+120         \textcolor{keywordflow}{if}(type == \textcolor{stringliteral}{"Miser"}) \{
+121             bh = couple[i].\hyperlink{classcouple_a92496b42f9d1392013c4d7456318ad70}{getBudget}() - cost;
+122         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(type == \textcolor{stringliteral}{"Generous"}) \{
+123             bh = couple[i].\hyperlink{classcouple_ada2f9b79cede186a0e9bcd6b48bec804}{getGirlHappiness}();
+124         \} \textcolor{keywordflow}{else} \{
+125             bh = girl[i].\hyperlink{classGirl_afe73c4c4f180aa8f5e0bc4f87455ec0b}{getIntelligence}();
+126         \}
+127         couple[i].\hyperlink{classcouple_a50a890cb7ffd3a44f0201b8e0d84f744}{setBoyHappiness}(bh);
+128         couple[i].\hyperlink{classcouple_aaaadc39a9f265907581925ef579c7214}{setHappiness}();
+129     \}
+130 
+131     \textcolor{keywordtype}{int} h1,h2;
+132 
+133     k = 3;
+135     \textcolor{keywordflow}{for}(i = 0; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+136         h1 = couple[i].\hyperlink{classcouple_a31d0a1c8acff06a64ebc2e2f6d9a68b1}{getHappiness}();
+137         \textcolor{keywordflow}{for}(j = i+1; j < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; j++) \{
+138             h2 = couple[j].\hyperlink{classcouple_a31d0a1c8acff06a64ebc2e2f6d9a68b1}{getHappiness}();
+139             \textcolor{keywordflow}{if}(h1 > h2) \{
+140                 \hyperlink{Q4_8cpp_a5a408068bacb1c7add72673eb9d96bbc}{swapCouple}(couple[i], couple[j]);
+141             \}
+142         \}
+143     \}
+144 
+146     \textcolor{keywordflow}{for}(i = 0; i< k; i++) \{
+147         happiness << couple[i].\hyperlink{classcouple_afe07f86e775d20508e6cd139488af366}{getBoyname}() << \textcolor{stringliteral}{"  "} << couple[i].
+      \hyperlink{classcouple_a7897320b780dbeaa85380c71803de9c2}{getGirlname}() << endl;
+148     \}
+149 
+151     \textcolor{keywordflow}{for}( i = 0; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+152         couple[i].\hyperlink{classcouple_a91bc77488fe8b5d30643b9ff0a56d359}{setCompatibility}();
+153     \}
+154 
+156     \textcolor{keywordflow}{for}(i = 0; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+157         h1 = couple[i].\hyperlink{classcouple_a43d2852ce692307280ba9ab2366c16eb}{getCompatibility}();
+158         \textcolor{keywordflow}{for}(j = i+1; j < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; j++) \{
+159             h2 = couple[j].\hyperlink{classcouple_a43d2852ce692307280ba9ab2366c16eb}{getCompatibility}();
+160             \textcolor{keywordflow}{if}(h1 > h2) \{
+161                 \hyperlink{Q4_8cpp_ac5c65f5b5ec33f7b8ab8012de336fdb7}{swapC}(couple[i],couple[j]);
+162             \}
+163         \}
+164     \}
+165 
+167     k = 0;
+168     \textcolor{keywordtype}{int} ind[100],p = 2;
+169     \textcolor{keywordflow}{for}(i = noGirls - k; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+170         breakup << couple[i].\hyperlink{classcouple_afe07f86e775d20508e6cd139488af366}{getBoyname}() << \textcolor{stringliteral}{"  "} << couple[i].
+      \hyperlink{classcouple_a7897320b780dbeaa85380c71803de9c2}{getGirlname}() << endl;
+171         ind[i] = 100;
+172     \}
+173 
+175     \textcolor{keywordflow}{for}( i = noGirls - p; i < \hyperlink{lib7_8h_afbf77341ebcfec44fd5ed146e13668bf}{noGirls}; i++) \{
+176         maint = girl[i].\hyperlink{classGirl_ac23543169a5e339a3c93fbd8aeb977ca}{getMaint}();
+177         girlName = girl[i].\hyperlink{classGirl_a27a705fb94b92dfd6929d0bf4bcaf5e1}{getName}();
+178         \textcolor{keywordflow}{for}( j = k; j < \hyperlink{lib7_8h_aeee5e31bf47987f4c471a1649ec9e43f}{noBoys}; j++) \{
+179             budget = boy[j].\hyperlink{classBoy_a05c48b12091ebcad44ba86ba88514ac5}{getBudget}();
+180             boyName = boy[j].\hyperlink{classBoy_acf59fd0074a6ea3413751a95b2970303}{getName}();
+181             \textcolor{keywordflow}{if}(maint < budget && !(boy[j].getStatus() ) ) \{
+182                     newCouples << girlName << \textcolor{stringliteral}{"        "} << boyName << endl;
+183                     couple[i].\hyperlink{classcouple_a3ee36a530603865ff58470bae84da220}{init}(boyName,boy[j].getType(), girlName,boy[j].getBudget(),girl[i].
+      getMaint(),boy[j].getAttr(),girl[i].getAttr(),boy[j].getIntelli(),girl[i].getIntelli());
+184                     girl[i].\hyperlink{classGirl_ac4e040efdf40d12044bda1b647e0d2da}{changeStatus}();
+185                     boy[j].\hyperlink{classBoy_a2a8cc82d9332c07eb475198e46028d52}{changeStatus}();
+186                     k++;
+187                     \textcolor{keywordflow}{break};
+188             \} 
+189         \}
+190     \}
+191 
+193     \textcolor{keywordflow}{for}(i = 0; i < \hyperlink{lib7_8h_aeee5e31bf47987f4c471a1649ec9e43f}{noBoys}; i++) \{
+194         \textcolor{keywordflow}{if}(ind[i] == 100) \{
+195             boy[i].\hyperlink{classBoy_a2a8cc82d9332c07eb475198e46028d52}{changeStatus}();
+196         \}
+197     \}
+198 
+199 \}
+\end{DoxyCode}
+\index{Q4.\+cpp@{Q4.\+cpp}!swapC@{swapC}}
+\index{swapC@{swapC}!Q4.\+cpp@{Q4.\+cpp}}
+\subsubsection[{\texorpdfstring{swap\+C(couple \&a, couple \&b)}{swapC(couple &a, couple &b)}}]{\setlength{\rightskip}{0pt plus 5cm}void swapC (
+\begin{DoxyParamCaption}
+\item[{{\bf couple} \&}]{a, }
+\item[{{\bf couple} \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{Q4_8cpp_ac5c65f5b5ec33f7b8ab8012de336fdb7}{}\label{Q4_8cpp_ac5c65f5b5ec33f7b8ab8012de336fdb7}
+
+\begin{DoxyCode}
+20 \{
+21     \hyperlink{classcouple}{couple} temp = a;
+22     a = b;
+23     b = temp;
+24 \}
+\end{DoxyCode}
+\index{Q4.\+cpp@{Q4.\+cpp}!swap\+Couple@{swap\+Couple}}
+\index{swap\+Couple@{swap\+Couple}!Q4.\+cpp@{Q4.\+cpp}}
+\subsubsection[{\texorpdfstring{swap\+Couple(couple \&a, couple \&b)}{swapCouple(couple &a, couple &b)}}]{\setlength{\rightskip}{0pt plus 5cm}void swap\+Couple (
+\begin{DoxyParamCaption}
+\item[{{\bf couple} \&}]{a, }
+\item[{{\bf couple} \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{Q4_8cpp_a5a408068bacb1c7add72673eb9d96bbc}{}\label{Q4_8cpp_a5a408068bacb1c7add72673eb9d96bbc}
+
+\begin{DoxyCode}
+13 \{
+14     \hyperlink{classcouple}{couple} temp = a;
+15     a = b;
+16     b = temp;
+17 \}
+\end{DoxyCode}

@@ -3,6 +3,8 @@
 70 65 Utility
 100 75 Utility
 120 190 Essential
+90 200 Essential
+130 230 Utility
 80 250 Luxury
 150 300 Luxury
 300 350 Luxury
